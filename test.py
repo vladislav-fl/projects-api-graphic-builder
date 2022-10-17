@@ -10,11 +10,17 @@ display = Tree()
 # к ним обращаться и в любой последовательности добавлять элементы к разным деревам 
 # (нужна ли разная последовательность?)
 
+# Сделать возможность сразу загружать готовый json файлик
+
+# Поменять добавление элемента, чтобы в одной функции можно было добавить несколько типов (GET, POST и так далее) к одному URL
+
+# Обводить один URL с разными типами в еще один div
+
 branch_id = display.create_branch('main domen', 'site for texting', 'https://site.com')
 display.add_element(
     branch_id=branch_id,
     tag='main',
-    description='main page of site',
+    description='Main page of site where you can see all information',
     url='https://site.com/',
     type='GET',
     links_from=[], # нужно убрать либо links_from, либо links_to
@@ -22,55 +28,85 @@ display.add_element(
 )
 display.add_element(
     branch_id=branch_id,
-    tag='help',
-    description='help page of site',
-    url='https://site.com/help',
+    tag='main',
+    description='Main page of site where you can see all information',
+    url='https://site.com/',
     type='GET',
-    links_from=['main'],
+    links_from=[], # нужно убрать либо links_from, либо links_to
     links_to=[]
 )
-
-# Вместо display.add_element использовать branch.add_element
-
-branch_id = display.create_branch('secondary domen', 'site for texting', 'https://site.com')
 display.add_element(
     branch_id=branch_id,
     tag='main',
-    description='main page of site',
+    description='Main page of site where you can see all information',
+    url='https://site.com/',
+    type='GET',
+    links_from=[], # нужно убрать либо links_from, либо links_to
+    links_to=[]
+)
+display.add_element(
+    branch_id=branch_id,
+    tag='mdsfain',
+    description='Main page of site where you can see all information',
+    url='https://site.com/',
+    type='GET',
+    links_from=[], # нужно убрать либо links_from, либо links_to
+    links_to=[]
+)
+display.add_element(
+    branch_id=branch_id,
+    tag='mdsfain',
+    description='Main page of site where you can see all information',
+    url='https://site.com/',
+    type='GET',
+    links_from=[], # нужно убрать либо links_from, либо links_to
+    links_to=[]
+)
+display.add_element(
+    branch_id=branch_id,
+    tag='mdsfain',
+    description='Main page of site where you can see all information',
+    url='https://site.com/',
+    type='GET',
+    links_from=[], # нужно убрать либо links_from, либо links_to
+    links_to=[]
+)
+display.add_element(
+    branch_id=branch_id,
+    tag='mdsffsdfain',
+    description='Main page of site where you can see all information',
+    url='https://site.com/',
+    type='GET',
+    links_from=[], # нужно убрать либо links_from, либо links_to
+    links_to=[]
+)
+
+
+branch_id = display.create_branch('second domen', 'second site for texting', 'https://second.site.com')
+display.add_element(
+    branch_id=branch_id,
+    tag='main',
+    description='Main page of second site',
     url='https://second.site.com/',
     type='GET',
-    links_from=[],
+    links_from=[], # нужно убрать либо links_from, либо links_to
     links_to=[]
 )
 
+
+branch_id = display.create_branch('3 domen', 'second site for texting', 'https://third.site.com')
 display.add_element(
     branch_id=branch_id,
-    tag='help',
-    description='help page of site',
-    url='https://second.site.com/help',
+    tag='maifsfdsfdfsdfn',
+    description='Main page of second site',
+    url='https://third.site.com/',
     type='GET',
-    links_from=[],
+    links_from=[], # нужно убрать либо links_from, либо links_to
     links_to=[]
 )
 
-display.add_element(
-    branch_id=branch_id,
-    tag='help',
-    description='help page of site with POST',
-    url='https://second.site.com/help',
-    type='POST',
-    links_from=[],
-    links_to=[]
-)
 
-display.add_element(
-    branch_id=branch_id,
-    tag='blog',
-    description='blog page',
-    url='https://second.site.com/blog',
-    type='GET',
-    links_from=[],
-    links_to=[]
-)
+
+
 
 display.build()

@@ -1,5 +1,5 @@
 import json
-from graphic import _Tree_Costructor
+from graphic import _Tree_Costructor, _Graphs_Constructor
 
 class Structure:
     STRUCTURE_PATH: str = 'structure/structure.json'
